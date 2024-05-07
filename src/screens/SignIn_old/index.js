@@ -15,7 +15,7 @@ const SignIn = () => {
                 <Text style={styles.message}>Bem-vindo!</Text>
             </Animatable.View>
             <Animatable.View animation='fadeInUp' style={styles.containerForm}>
-                <Text style={styles.title} email></Text>
+                <Text style={styles.title} email>Email</Text>
                 <TextInput
                     placeholder='Digite seu email...'
                     style={styles.input}

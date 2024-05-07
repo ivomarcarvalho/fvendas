@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
     },
     button: {
       //  position:"absolute",
-        backgroundColor: '#38A69D',
+     // backgroundColor: '#38A69D',
+      backgroundColor: '#63C2D1',
         width: '60%',
         borderRadius: 15,
         paddingVertical: 8,
@@ -69,6 +70,18 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
     },
+    buttonRegister: {
+        marginTop: 14,
+        alignSelf: 'center',
+    },
+    buttonRegisterText: {
+        color: '#268596',
+    },
+    buttonRegisterTextBold: {
+        color: '#268596',
+        fontWeight:'bold',
+    },
+
 })
 
 export default styles
