@@ -3,16 +3,18 @@ import React, { useState } from "react";
 import { View, Text, Button } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 
+import { createTable } from "../../controller/TableController";
 import { getAllUsuarios } from '../../controller/UsuarioController';
 import { initializeDatabase, executeTransaction } from '../../database/SQLiteDatabase3';
 
 const up = async () => {
   console.log('up')
-  await initializeDatabase();
+ // await initializeDatabase();
+  await createTable();
 }
 
 const add = async () => {
-  console.log('create');
+  console.log('insert into');
   try {
     await executeTransaction('INSERT INTO usuario (nome) VALUES (?)', ['ivomar']);
     console.log('Usuário adicionado com sucesso');

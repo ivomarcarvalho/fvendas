@@ -2,7 +2,9 @@ import * as SQLite from 'expo-sqlite';
 
 const db = SQLite.openDatabase('fvendas3.db');
 
+
 // Função para criar o banco de dados e tabelas, se ainda não existirem
+
 const initializeDatabase = () => {
   db.transaction(tx => {
     tx.executeSql(
@@ -40,4 +42,4 @@ const executeTransaction = async (sql, values = []) => {
   });
 };
 
-export { initializeDatabase,executeTransaction };
+export { initializeDatabase, executeTransaction };

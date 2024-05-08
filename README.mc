@@ -13,12 +13,20 @@ expo install react-native-animatable
 # npx expo install expo-sqlite
 
 
+winget install --id Git.Git -e --source winget
 
-# 
 git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
+git -v
+git status
+git add .
+git commit -m "msg - primeiro commit"
+
+
+
+# renomear de master para main
+git branch -M "main"
+
+git push -u origin main
 git remote add origin https://github.com/ivomarcarvalho/fvendas.git
 git push -u origin main
 
