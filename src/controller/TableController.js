@@ -1,18 +1,19 @@
 import { executeTransaction } from '../database/SQLiteDatabase3';
-import { UsuarioModel } from '../module/UsuarioModule';
+import { Usuario } from '../module/Usuario';
 
-const createTable = async () => {
-    try {
-        const sql = 'CREATE TABLE IF NOT EXISTS usuario (\
-                     id INTEGER PRIMARY KEY AUTOINCREMENT,\
-                     nome TEXT NOT NULL);'
-        console.log(sql)
-        const ivm = UsuarioModel
-        console.log(ivm)
-        await executeTransaction(sql)
-        console.log('Tabela usuario criada com sucesso')
-    } catch (error) {
-        console.error('Erro ao criar a tabela usuario:', error)
-    }
+
+// Função para criar a tabela com base na definição
+const createUsuarioTable = async () => {
+  const colunas = Object.entries(Usuario).map(([columnName, columnDefinition]) => `${columnName} ${columnDefinition}`).join(', ');
+  const query = `CREATE TABLE IF NOT EXISTS usuario (${colunas})`;
+  try {
+    await executeTransaction(query);
+    console.log('Tabela de usuários criada com sucesso.');
+  } catch (error) {
+    console.error('Erro ao criar tabela de usuários:', error);
+  }
 };
+const createTable = async () => {
+  createUsuarioTable()
+}
 export { createTable };
