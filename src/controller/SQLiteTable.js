@@ -1,4 +1,4 @@
-import { executeTransaction } from '../database/SQLiteDatabase3';
+import { executeTransaction } from '../database/SQLiteDatabase';
 import { Usuario } from '../module/Usuario';
 
 

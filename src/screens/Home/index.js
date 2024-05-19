@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import { View, Text, Button } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 
-import { createTable } from "../../controller/TableController";
-import { getAllUsuarios } from '../../controller/UsuarioController';
-import { initializeDatabase, executeTransaction } from '../../database/SQLiteDatabase3';
+import { createTable } from "../../controller/SQLiteTable";
+import { getAllUsuarios } from '../../controller/Usuario';
 
 const up = async () => {
   console.log('up')
@@ -35,7 +34,7 @@ const getUsuarios = async () => {
 
 
 
-const Teste2 = () => {
+const Home = () => {
   const navigation = useNavigation()
   return (
     <View>
@@ -51,4 +50,4 @@ const Teste2 = () => {
 }
 
 
-export default Teste2;
+export default Home;

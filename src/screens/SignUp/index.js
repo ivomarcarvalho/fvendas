@@ -14,8 +14,9 @@ const Config = () => {
     </View>
 
     <View style={styles.containerForm}>
+      <Text style={styles.label}>IP</Text>
       <TextInput
-        placeholder='IP'
+        placeholder='Digite o IP do host'
         keyboardType='number-pad'
         style={styles.input} />
       <TextInput

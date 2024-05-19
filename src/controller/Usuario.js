@@ -1,5 +1,5 @@
 
-import { executeTransaction } from '../database/SQLiteDatabase3';
+import { executeTransaction } from '../database/SQLiteDatabase';
 
 const getAllUsuarios = async () => {
   try {

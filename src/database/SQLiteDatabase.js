@@ -2,8 +2,11 @@ import * as SQLite from 'expo-sqlite';
 
 const db = SQLite.openDatabase('fvendas3.db');
 
+console.log('db - sqlite')
 
 // Função para criar o banco de dados e tabelas, se ainda não existirem
+
+// Nao estou usando. deixei como exemplo
 
 const initializeDatabase = () => {
   db.transaction(tx => {
@@ -11,7 +14,7 @@ const initializeDatabase = () => {
       `
       CREATE TABLE IF NOT EXISTS usuario (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nome TEXT NOT NULL
+        nome TEXT NOT NULL 
       )
       `,
       [],

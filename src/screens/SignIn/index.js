@@ -10,7 +10,6 @@ import {
 import styles from './styles';
 import Logo from '../../assets/techhall.png'
 
-
 import * as Animatable from 'react-native-animatable'
 
 import { useNavigation } from '@react-navigation/native'
@@ -38,7 +37,7 @@ const Signin = () => {
                     style={styles.input}
                 />
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Welcome')}
+                    onPress={() => navigation.navigate('Home')}
                     style={styles.button}
                 >
                     <Text style={styles.buttonText}>Acessar</Text>
@@ -54,24 +53,14 @@ const Signin = () => {
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.navigate('Welcome')}
                     style={styles.buttonRegister}
                 >
                     <Text>
-                        <Text style={styles.buttonRegisterText}>Home, </Text>
+                        <Text style={styles.buttonRegisterText}>Welcome, </Text>
                         <Text style={styles.buttonRegisterTextBold}>cadastre-se</Text>
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Teste2')}
-                    style={styles.buttonRegister}
-                >
-                    <Text>
-                        <Text style={styles.buttonRegisterText}>Teste, </Text>
-                        <Text style={styles.buttonRegisterTextBold}>cadastre-se</Text>
-                    </Text>
-                </TouchableOpacity>
-
             </ Animatable.View>
         </View>
     )

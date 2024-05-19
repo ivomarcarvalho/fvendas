@@ -1,16 +1,22 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
+
 const Stack = createNativeStackNavigator()
 
+import Preload from '../screens/Preload';
 import SignIn from "../screens/SignIn";
 import SignUp from "../screens/SignUp";
-import Welcome from "../screens/Welcome";
 import Home from "../screens/Home";
-import Teste2 from "../screens/Teste2";
+import Welcome from "../screens/Welcome";
 
 const Routes = () => {
     return (
-        <Stack.Navigator initialRouteName='SignIn'>
+        <Stack.Navigator initialRouteName='Preload'>
+            <Stack.Screen
+                name='Preload'
+                component={Preload}
+                options={{ headerShown: false }}
+            />
             <Stack.Screen
                 name='SignIn'
                 component={SignIn}
@@ -24,11 +30,6 @@ const Routes = () => {
             <Stack.Screen
                 name='Home'
                 component={Home}
-                options={{ headerShown: false }}
-            />
-            <Stack.Screen
-                name='Teste2'
-                component={Teste2}
                 options={{ headerShown: false }}
             />
             <Stack.Screen
